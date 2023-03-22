@@ -23,7 +23,7 @@ const When = () => {
     <section className={`${styles.paddings} bg-green-800`} id="when">
       <div className="md:mx-10 xl:mx-60 2xl:mx-80 pt-10 xl:pt-24">
         <h2 className="text-white uppercase text-center text-3xl pt-4 tracking-tight sm:text-4xl md:text-4xl xl:text-5xl">
-          New Players
+          Blogs
           <br />
           <Link className="" href={'/about'}>
             <span className="hover:text-red-600 text-white opacity-90 pb-4 tracking-tight font-bold text-6xl  sm:text-8xl md:text-8xl xl:text-9xl">

@@ -3,13 +3,13 @@ import Head from 'next/head';
 import { Card } from '@/components/Card';
 import { SimpleLayout } from '@/components/SimpleLayout';
 import { formatDate } from '@/lib/formatDate';
-import { getAllEvents } from '@/lib/getAllEvents';
+import { getAllArticles } from '@/lib/getAllArticles';
 
 function Event({ event }) {
   return (
     <event className="md:grid md:grid-cols-4 md:items-baseline pb-12 ">
       <Card className="md:col-span-3">
-        <Card.Title href={`/events/${event.slug}`}>{event.title}</Card.Title>
+        <Card.Title href={`/articles/${event.slug}`}>{event.title}</Card.Title>
         <Card.Eyebrow as="time" dateTime={event.date} className="md:hidden" decorate>
           {formatDate(event.date)}
         </Card.Eyebrow>
@@ -46,7 +46,7 @@ export default function EventsIndex({ events }) {
 export async function getStaticProps() {
   return {
     props: {
-      events: (await getAllEvents()).map(({ component, ...meta }) => meta),
+      events: (await getAllArticles()).map(({ component, ...meta }) => meta),
     },
   };
 }
